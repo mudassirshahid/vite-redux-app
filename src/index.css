@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.936);
+}
