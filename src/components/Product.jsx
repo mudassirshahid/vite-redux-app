@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import react from "../assets/react.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, clearAllItems, removeItem } from "../redux/slices/addToCart";

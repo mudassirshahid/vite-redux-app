@@ -30,6 +30,7 @@ const Table = () => {
         className="border px-3 py-2 rounded w-full mb-4"
       />
 
+<div className="overflow-x-auto">
       <table className="table-auto w-full border-collapse border border-gray-400">
         <thead>
           <tr className="bg-gray-800">
@@ -75,6 +76,7 @@ const Table = () => {
           } */}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };
