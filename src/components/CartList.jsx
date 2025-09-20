@@ -21,16 +21,23 @@ export default function CartList() {
             className="flex justify-between items-center border-b pb-2"
           >
             <div>
+              <img
+                    className=""
+                    src={item.image}
+                    alt={item.title}
+                    width="200"
+                  />
               <h3 className="font-semibold">{item.title}</h3>
               <p className="text-sm text-gray-500">${item.price}</p>
-            </div>
-
-            <button
+              <button
               className="bg-red-500 text-white px-3 py-1 rounded"
               onClick={() => dispatch(removeItem(item.id))}
             >
               Remove
             </button>
+            </div>
+
+            
           </li>
         ))}
       </ul>

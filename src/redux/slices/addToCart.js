@@ -18,9 +18,14 @@ const addToCart = createSlice({
         },
         removeItem: (state,action) => {
              // action.payload = product id
-             const cartData = state.items.filter(item => item.id != action.payload)
-             state.items = cartData  
-             localStorage.setItem('cart',JSON.stringify(cartData))
+               // reduce quantity instead of removing all
+  const item = state.items.find(i => i.id === action.payload);
+  if (item && item.quantity > 1) {
+    item.quantity -= 1;
+  } else {
+    state.items = state.items.filter(i => i.id !== action.payload);
+  }
+  localStorage.setItem('cart', JSON.stringify(state.items));
         },
         clearAllItems: (state) => {
              state.items = []   // reset to empty array
